@@ -1,4 +1,6 @@
-﻿namespace FileViewer.CrossCuttingLayer.Models.Request
+﻿using FileViewer.CrossCuttingLayer.Enums;
+
+namespace FileViewer.CrossCuttingLayer.Models.Request
 {
     /// <summary>
     /// Request object to get the AWS File

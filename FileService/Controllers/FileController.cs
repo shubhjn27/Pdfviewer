@@ -21,12 +21,5 @@ namespace FileService.Controllers
             return fileResponse;
         }
 
-        [Route("view/core")]
-        [HttpGet]
-        public async Task<FileRequest> ViewFile(CoreFileRequest file)
-        {
-            FileRequest fileResponse = new FileRequest();
-            return fileResponse;
-        }
     }
 }
