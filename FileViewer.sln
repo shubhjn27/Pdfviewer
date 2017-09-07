@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileViewer", "FileService\F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileViewer.Dependency.Implementation", "FileViewer.Dependency.Implementation\FileViewer.Dependency.Implementation.csproj", "{7D676770-2BCB-4E3D-9D40-D093B5739A2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileViewer.UI", "FileViewer.UI\FileViewer.UI.csproj", "{5190FC4F-26E1-4CDD-97FA-CBF5E8A745EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7D676770-2BCB-4E3D-9D40-D093B5739A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D676770-2BCB-4E3D-9D40-D093B5739A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D676770-2BCB-4E3D-9D40-D093B5739A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5190FC4F-26E1-4CDD-97FA-CBF5E8A745EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5190FC4F-26E1-4CDD-97FA-CBF5E8A745EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5190FC4F-26E1-4CDD-97FA-CBF5E8A745EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5190FC4F-26E1-4CDD-97FA-CBF5E8A745EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
