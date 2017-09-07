@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="CopyPDFNetNativeBinaries" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <NativeBinary Include="$(MSBuildThisFileDirectory)PDFNet\x86\PDFNet.dll" Condition="$(Platform) == x86" />
+    <NativeBinary Include="$(MSBuildThisFileDirectory)PDFNet\x64\PDFNet.dll" Condition="$(Platform) == x64" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PrepareForRunDependsOn>
+      $(PrepareForRunDependsOn);
+      CopyPDFNetNativeBinaries
+    </PrepareForRunDependsOn>
+  </PropertyGroup>
+  <Target Name="CopyPDFNetNativeBinaries">
+    <Copy SourceFiles="@(NativeBinary)" DestinationFiles="@(NativeBinary->'$(OutDir)\%(TargetName)\%(Filename)%(Extension)')">
+      <Output TaskParameter="DestinationFiles" ItemName="FileWrites" />
+    </Copy>
+  </Target>
+</Project>
