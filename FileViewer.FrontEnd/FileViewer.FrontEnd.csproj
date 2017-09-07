@@ -1,0 +1,559 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FAAECD88-5171-418B-AA9D-59678B331807}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FileViewer.FrontEnd</RootNamespace>
+    <AssemblyName>FileViewer.FrontEnd</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\WebViewer\assets\NeoSansStd-Regular.woff" />
+    <Content Include="Scripts\WebViewer\lib\html5\.htaccess" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\PDFNetC.js.mem" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\PDFWorker.nmf" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\PDFWorker.pexe" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\SimpleWorker.nmf" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\SimpleWorker.pexe" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\i18n\translation-de.json" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\i18n\translation-en.json" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\i18n\translation-es.json" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\i18n\translation-fr.json" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\i18n\translation-gl.json" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\i18n\translation-pt_br.json" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\i18n\translation-ru.json" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\custom.eot" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\custom.ttf" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\custom.woff" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\glyphicons-regular.eot" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\glyphicons-regular.otf" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\glyphicons-regular.ttf" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\glyphicons-regular.woff" />
+    <Content Include="Scripts\WebViewer\JavaScriptSuccinctly.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.module.js" />
+    <Content Include="app\main.js" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\WebViewer\assets\colorbox\colorbox.css" />
+    <Content Include="Scripts\WebViewer\assets\colorbox\images\border.png" />
+    <Content Include="Scripts\WebViewer\assets\colorbox\images\controls.png" />
+    <Content Include="Scripts\WebViewer\assets\colorbox\images\loading.gif" />
+    <Content Include="Scripts\WebViewer\assets\colorbox\images\loading_background.png" />
+    <Content Include="Scripts\WebViewer\assets\colorbox\jquery.colorbox-min.js" />
+    <Content Include="Scripts\WebViewer\assets\images\accessible.png" />
+    <Content Include="Scripts\WebViewer\assets\images\android.png" />
+    <Content Include="Scripts\WebViewer\assets\images\android_app.png" />
+    <Content Include="Scripts\WebViewer\assets\images\annotation.png" />
+    <Content Include="Scripts\WebViewer\assets\images\bookstore2.png" />
+    <Content Include="Scripts\WebViewer\assets\images\bug_fix.png" />
+    <Content Include="Scripts\WebViewer\assets\images\cordova.png" />
+    <Content Include="Scripts\WebViewer\assets\images\customize-signature.png" />
+    <Content Include="Scripts\WebViewer\assets\images\customize.png" />
+    <Content Include="Scripts\WebViewer\assets\images\deckjs.png" />
+    <Content Include="Scripts\WebViewer\assets\images\diamond-annotation.png" />
+    <Content Include="Scripts\WebViewer\assets\images\display-mode.png" />
+    <Content Include="Scripts\WebViewer\assets\images\encryption.png" />
+    <Content Include="Scripts\WebViewer\assets\images\external-link-m-blue.png" />
+    <Content Include="Scripts\WebViewer\assets\images\external-link-m-grey.png" />
+    <Content Include="Scripts\WebViewer\assets\images\flipbook.png" />
+    <Content Include="Scripts\WebViewer\assets\images\folder.png" />
+    <Content Include="Scripts\WebViewer\assets\images\form-actions.png" />
+    <Content Include="Scripts\WebViewer\assets\images\forms.png" />
+    <Content Include="Scripts\WebViewer\assets\images\hide-annotations.png" />
+    <Content Include="Scripts\WebViewer\assets\images\i18n.png" />
+    <Content Include="Scripts\WebViewer\assets\images\ios.png" />
+    <Content Include="Scripts\WebViewer\assets\images\ios_app.png" />
+    <Content Include="Scripts\WebViewer\assets\images\layers.png" />
+    <Content Include="Scripts\WebViewer\assets\images\local-pdf.png" />
+    <Content Include="Scripts\WebViewer\assets\images\new.png" />
+    <Content Include="Scripts\WebViewer\assets\images\new_blue.png" />
+    <Content Include="Scripts\WebViewer\assets\images\noisy-texture-100x100-o5-d10-c-ffffff-t1.png" />
+    <Content Include="Scripts\WebViewer\assets\images\noisy-texture-100x100-o6-d10-c-d1c1c6-t1.png" />
+    <Content Include="Scripts\WebViewer\assets\images\offline-library.png" />
+    <Content Include="Scripts\WebViewer\assets\images\offline.png" />
+    <Content Include="Scripts\WebViewer\assets\images\page_white.png" />
+    <Content Include="Scripts\WebViewer\assets\images\simple-controls.png" />
+    <Content Include="Scripts\WebViewer\assets\images\stamp.png" />
+    <Content Include="Scripts\WebViewer\assets\images\text-position.png" />
+    <Content Include="Scripts\WebViewer\assets\images\users.png" />
+    <Content Include="Scripts\WebViewer\assets\images\web-server.png" />
+    <Content Include="Scripts\WebViewer\assets\images\winrt.png" />
+    <Content Include="Scripts\WebViewer\assets\images\winrt_app.png" />
+    <Content Include="Scripts\WebViewer\assets\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\WebViewer\assets\samples.css" />
+    <Content Include="Scripts\WebViewer\assets\style.css" />
+    <Content Include="Scripts\WebViewer\assets\treeview\images\minus.gif" />
+    <Content Include="Scripts\WebViewer\assets\treeview\images\plus.gif" />
+    <Content Include="Scripts\WebViewer\assets\treeview\images\treeview-default-line.gif" />
+    <Content Include="Scripts\WebViewer\assets\treeview\images\treeview-default.gif" />
+    <Content Include="Scripts\WebViewer\assets\treeview\jquery.cookie.js" />
+    <Content Include="Scripts\WebViewer\assets\treeview\jquery.treeview.css" />
+    <Content Include="Scripts\WebViewer\assets\treeview\jquery.treeview.js" />
+    <Content Include="Scripts\WebViewer\config.html" />
+    <Content Include="Scripts\WebViewer\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\AnnotationEdit.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\AnnotationEdit.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\annotationHandler.php" />
+    <Content Include="Scripts\WebViewer\lib\html5\BaseReaderControl.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\ControlUtils.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\CoreControls.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\CoreWorker.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\DecryptWorker.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\defaultScriptExtension.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\defaultStyleExtension.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\docViewer.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\index.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\PDFTron.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.Action.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.Dispatcher.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.GoTo.Dest.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.GoTo.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.Hide.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.JavaScript.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.Named.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.ResetForm.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.SubmitForm.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Actions.URI.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Annotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.BoxControlHandle.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.BoxSelectionModel.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.ButtonWidgetAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.CalloutControlHandle.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.CaretAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.CheckButtonWidgetAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.ChoiceWidgetAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Color.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.ControlHandle.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.EllipseAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Font.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Forms.Field.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Forms.FieldManager.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Forms.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.FreeHandAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.FreeTextAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.FreeTextSelectionModel.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.HTMLAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.IPathAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.LineAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.LineControlHandle.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.LineSelectionModel.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Link.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.ListWidgetAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.MarkupAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.PathControlHandle.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.PathSelectionModel.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Point.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.PolygonAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.PolylineAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.PopupAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.RadioButtonWidgetAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.Rect.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.RectangleAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.SelectionAlgorithm.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.SelectionModel.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.SignatureWidgetAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.StampAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.StickyAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.TextHighlightAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.TextMarkupAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.TextSelectionModel.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.TextSquigglyAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.TextStrikeoutAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.TextUnderlineAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.TextWidgetAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.WidgetAnnotation.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Annotations.WidgetFlags.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\BaseReaderControl.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.AnnotationManager.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.Bookmark.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.DisplayMode.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.DisplayModeManager.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.DisplayModes.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.Document.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.DocumentViewer.FitMode.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.DocumentViewer.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.DocumentViewer.SearchMode.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.DocumentViewer.SearchResults.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\CoreControls.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.AndroidContentPartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.AzurePartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.ExternalPdfPartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.HttpPartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.IOSPartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.LocalPartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.LocalPdfPartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.StreamingPartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PartRetrievers.WinRTPartRetriever.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\PDFTron.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\ReaderControl.config.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\ReaderControl.config.ui.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\ReaderControl.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.AnnotationEditTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.AnnotationSelectTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.ArrowCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.CalloutCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.EllipseCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.FreeHandCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.FreeTextCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.GenericAnnotationCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.LineCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.PageCoordinate.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.PanTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.PolygonCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.PolylineCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.RectangleCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.SignatureCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.StickyCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.TextAnnotationCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.TextHighlightCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.TextSelectTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.TextSquigglyCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.TextStrikeoutCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.TextTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.TextUnderlineCreateTool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\Tools.Tool.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\WebViewerInterface.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\doc\symbols\_global_.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\Autolinker.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\context.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\context.standalone.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\css\drop-theme-arrows-bounce-dark.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\css\drop-theme-arrows-bounce.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\css\drop-theme-arrows.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\css\drop-theme-basic.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\css\drop-theme-hubspot-popovers.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\css\extras\drop-twitter-bootstrap.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\drop.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\drop.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\drop\js\drop.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\fastclick.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\FileSaver.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\i18next-1.6.0.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\glyphicons_072_bookmark.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\loading.gif" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\treeview-default-line.gif" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\treeview-default.gif" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\jquery-ui-1.11.1.custom.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\jquery-ui-1.11.1.custom.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-bg_glass_65_CBE6EF_1x400.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\jquery-ui-1.11.1.custom.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery-ui\themes\cloud\jquery-ui-1.11.1.custom.min.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.cookie.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.doubletap.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.flexibleArea.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\ajax-loader.gif" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\action-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\action-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\alert-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\alert-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-d-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-d-l-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-d-l-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-d-r-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-d-r-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-d-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-l-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-l-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-r-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-r-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-u-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-u-l-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-u-l-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-u-r-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-u-r-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\arrow-u-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\audio-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\audio-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\back-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\back-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\bars-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\bars-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\bullets-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\bullets-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\calendar-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\calendar-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\camera-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\camera-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\carat-d-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\carat-d-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\carat-l-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\carat-l-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\carat-r-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\carat-r-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\carat-u-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\carat-u-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\check-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\check-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\clock-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\clock-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\cloud-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\cloud-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\comment-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\comment-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\delete-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\delete-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\edit-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\edit-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\eye-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\eye-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\forbidden-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\forbidden-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\forward-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\forward-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\gear-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\gear-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\grid-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\grid-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\heart-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\heart-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\home-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\home-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\info-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\info-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\location-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\location-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\lock-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\lock-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\mail-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\mail-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\minus-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\minus-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\navigation-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\navigation-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\phone-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\phone-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\plus-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\plus-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\power-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\power-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\recycle-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\recycle-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\refresh-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\refresh-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\search-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\search-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\shop-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\shop-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\star-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\star-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\tag-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\tag-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\user-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\user-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\video-black.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\images\icons-png\video-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\jquery.mobile-1.4.4.min.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\jquery.mobile-1.4.4.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\jquery.mobile.custom.structure.min.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\jquery.mobile.custom.theme.min.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mobile\jquery.mobile.icons-1.4.4.min.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.mousewheel.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.treeview.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\jquery.treeview.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\modernizr.custom.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\moment.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\touchr.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\turn.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\external\xdomain.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\formDataHandler.php" />
+    <Content Include="Scripts\WebViewer\lib\html5\legal.txt" />
+    <Content Include="Scripts\WebViewer\lib\html5\MobileReaderControl.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\MobileReaderControl.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\MobileReaderControl.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\mobileSetup.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\NotesPanel.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\PDFNet.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\pdfnet.res" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\PDFNetC.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\PDFReaderControl.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\PDFReaderControl.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\PDFworker.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\pdf\ResizableWorker.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\ReaderControl.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\ReaderControl.html" />
+    <Content Include="Scripts\WebViewer\lib\html5\ReaderControl.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\ReaderControlConfig.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\checkmark.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\color_none.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\jstree.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\jstree.min.js" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default-dark\32px.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default-dark\40px.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default-dark\style.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default-dark\style.min.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default-dark\throbber.gif" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default\32px.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default\40px.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default\style.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default\style.min.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dist\themes\default\throbber.gif" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dragginghand.cur" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\dragginghand.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\hand.cur" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\hand.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\css\controls.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\css\customicons.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\css\glyphicons.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\css\style.css" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\custom.svg" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\fonts\glyphicons-regular.svg" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\images\glyphicons-white.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\images\glyphicons-white.svg" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\images\glyphicons.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icons\images\glyphicons.svg" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\icon_credits.txt" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\minus.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\minus_circle.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\ok_circle.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\plus.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\Resources\user.png" />
+    <Content Include="Scripts\WebViewer\lib\html5\WebViewerInterface.js" />
+    <Content Include="Scripts\WebViewer\lib\WebViewer.js" />
+    <Content Include="Scripts\WebViewer\lib\WebViewer.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\WebViewer\lib\html5\doc\symbols\src\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53020</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52884/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
