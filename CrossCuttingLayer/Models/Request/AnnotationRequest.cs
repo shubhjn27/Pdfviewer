@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dependency.File
+namespace CrossCuttingLayer.Models.Request
 {
-    interface IFileItem
+    public class AnnotationRequest
     {
-
     }
 }

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dependency.File
+namespace CrossCuttingLayer.Enums
 {
-    interface IFileItem
+    public enum FileSource
     {
-
+        Core = 1,
+        AWSBucket = 1<<1,
+        FileStream = 1<<2
     }
 }
