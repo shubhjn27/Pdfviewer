@@ -245,7 +245,16 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCuttingLayer\FileViewer.CrossCuttingLayer.csproj">
+      <Project>{e9adba78-9f51-45f6-a3fa-2874eb23b28d}</Project>
+      <Name>FileViewer.CrossCuttingLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\FileViewer.Service.csproj">
+      <Project>{7f037a89-7bf1-485d-a961-eefb013c8af8}</Project>
+      <Name>FileViewer.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
