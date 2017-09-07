@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>File Viewer</title>
+</head>
+<body ng-controller="Main as vm">
+
+    <div style="margin-bottom: 2%;">
+        <label>{{vm.docName}}</label>
+    </div>
+
+
+    <div style="border:2px solid black;" id="viewer">
+        
+    </div>
+    <script src="Scripts/WebViewer/jquery-1.7.2.min.js"></script>
+    <script src="Scripts/WebViewer/lib/WebViewer.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/main.js"></script>
+
+</body>
+</html>
