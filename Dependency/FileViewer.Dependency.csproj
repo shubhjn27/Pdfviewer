@@ -7,8 +7,8 @@
     <ProjectGuid>{76F72EAB-4A4C-4BA9-812D-870CF9882EDD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dependency</RootNamespace>
-    <AssemblyName>Dependency</AssemblyName>
+    <RootNamespace>FileViewer.Dependency</RootNamespace>
+    <AssemblyName>FileViewer.Dependency</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -7,8 +7,8 @@
     <ProjectGuid>{7F037A89-7BF1-485D-A961-EEFB013C8AF8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Service</RootNamespace>
-    <AssemblyName>Service</AssemblyName>
+    <RootNamespace>FileViewer.Service</RootNamespace>
+    <AssemblyName>FileViewer.Service</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
