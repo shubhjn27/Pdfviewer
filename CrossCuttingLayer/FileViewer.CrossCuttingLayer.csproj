@@ -7,8 +7,8 @@
     <ProjectGuid>{E9ADBA78-9F51-45F6-A3FA-2874EB23B28D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CrossCuttingLayer</RootNamespace>
-    <AssemblyName>CrossCuttingLayer</AssemblyName>
+    <RootNamespace>FileViewer.CrossCuttingLayer</RootNamespace>
+    <AssemblyName>FileViewer.CrossCuttingLayer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

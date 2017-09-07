@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Dependency.File
+namespace FileViewer.Dependency.File
 {
-    interface IFileItem
+    internal interface IFileItem<TFileAccessType>
     {
 
     }
