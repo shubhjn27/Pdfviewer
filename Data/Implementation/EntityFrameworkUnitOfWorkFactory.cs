@@ -1,9 +1,8 @@
 ﻿using System;
+using FileViewer.Data.Dependency;
+using FileViewer.Data.Entities;
 
-using NrsRepository.Dependency;
-using NrsRepository.Entities;
-
-namespace NrsRepository.Implementation
+namespace FileViewer.Data.Implementation
 {
     public class EntityFrameworkUnitOfWorkFactory : IUnitOfWorkFactory
     {
@@ -18,7 +17,7 @@ namespace NrsRepository.Implementation
         /// <returns></returns>
         public IDisposable GetDatabaseContext()
         {
-            var context = new NrsRepositoryNetRoadshowEntities();
+            var context = new FileViewerEntities();
             return context;
         }
     }

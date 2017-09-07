@@ -2,7 +2,7 @@
 using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
 
-namespace NrsRepository.Dependency
+namespace FileViewer.Data.Dependency
 {
     /// <summary>
     /// An interface that helps to perform multiple CRUD on multiple different objects within one transaction.

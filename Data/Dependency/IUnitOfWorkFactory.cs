@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NrsRepository.Dependency
+namespace FileViewer.Data.Dependency
 {
     public interface IUnitOfWorkFactory
     {

@@ -1,24 +1,11 @@
-﻿using System;
+﻿using FileViewer.Data.Dependency;
+using FileViewer.Data.Entities;
+using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Reflection;
-using System.Security.Claims;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Web.Configuration;
-using System.Web.UI.WebControls;
-using Newtonsoft.Json;
-using NrsRepository.Dependency;
-using NrsRepository.Entities;
-using Npgsql;
-using NpgsqlTypes;
-using NrsRepository.AuditLog;
 
-namespace NrsRepository.Implementation
+namespace FileViewer.Data.Implementation
 {
     public class EntityFrameworkUnitOfWork : IUnitOfWork
     {
@@ -38,7 +25,7 @@ namespace NrsRepository.Implementation
 
         public EntityFrameworkUnitOfWork(bool useTransaction)
         {
-            _context = new NrsRepositoryNetRoadshowEntities();
+            _context = new FileViewerEntities();
             LogToDatabase = true;
             _useTransaction = useTransaction;
             if (_useTransaction)
@@ -94,12 +81,12 @@ namespace NrsRepository.Implementation
         /// <returns></returns>
         private async Task SaveChangesPrivate(bool isAsync)
         {
-            var auditHelper = new AuditLogHelper();
-            AuditLog.AuditLog auditLog = new AuditLog.AuditLog();
+            //var auditHelper = new AuditLogHelper();
+            //AuditLog.AuditLog auditLog = new AuditLog.AuditLog();
 
             if (LogToDatabase)
             {
-                auditLog = auditHelper.GetAuditLogData(_context);
+               // auditLog = auditHelper.GetAuditLogData(_context);
             }
 
             if (isAsync)
@@ -115,7 +102,7 @@ namespace NrsRepository.Implementation
 
             if (LogToDatabase)
             {
-                auditHelper.SaveToLogDatabase(auditLog, _repositories);
+                //auditHelper.SaveToLogDatabase(auditLog, _repositories);
             }
 
             _transactionRolledBack = false;

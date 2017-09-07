@@ -2,9 +2,9 @@
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using NrsRepository.Dependency;
+using FileViewer.Data.Dependency;
 
-namespace NrsRepository.Implementation
+namespace FileViewer.Data.Implementation
 {
     public class EntityFrameworkUnitOfWorkRepository<TEntity> : IUnitOfWorkRepository<TEntity> where TEntity : class
     {
