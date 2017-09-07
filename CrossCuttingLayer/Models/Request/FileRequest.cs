@@ -5,7 +5,7 @@ namespace FileViewer.CrossCuttingLayer.Models.Request
     /// <summary>
     /// Request object to get the File
     /// </summary>
-    public class FileRequest
+    public class FileRequest<TFileAccessType>
     {
         //the user vieweing the document for adding annotations
         public Guid RequestedUserId { get; set; }

@@ -1,4 +1,4 @@
-﻿using CrossCuttingLayer.Models.Request;
+﻿using FileViewer.CrossCuttingLayer.Models.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +13,20 @@ namespace FileService.Controllers
     public class FileController : ApiController
     {
 
-        [Route("view")]
+        [Route("view/aws")]
         [HttpGet]
-        public async Task<FileRequest> ViewFile(FileRequest file)
+        public async Task<FileRequest> ViewFile(AWSFileRequest file)
         {
             FileRequest fileResponse = new FileRequest();
             return fileResponse;
         }
 
+        [Route("view/core")]
+        [HttpGet]
+        public async Task<FileRequest> ViewFile(CoreFileRequest file)
+        {
+            FileRequest fileResponse = new FileRequest();
+            return fileResponse;
+        }
     }
 }
