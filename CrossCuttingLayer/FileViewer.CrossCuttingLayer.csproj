@@ -43,6 +43,7 @@
     <Compile Include="Dto\FileItemDto.cs" />
     <Compile Include="Enums\FileSource.cs" />
     <Compile Include="Enums\FileType.cs" />
+    <Compile Include="Enums\WaterMarkInfoFields.cs" />
     <Compile Include="Models\Request\AnnotationRequest.cs" />
     <Compile Include="Models\Request\AWSFileRequest.cs" />
     <Compile Include="Models\Request\CoreFileRequest.cs" />
