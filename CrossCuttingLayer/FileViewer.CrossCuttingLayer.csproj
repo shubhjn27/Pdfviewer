@@ -47,11 +47,13 @@
     <Compile Include="Models\Request\AWSFileRequest.cs" />
     <Compile Include="Models\Request\CoreFileRequest.cs" />
     <Compile Include="Models\Request\FileRequest.cs" />
+    <Compile Include="Models\Response\AWSFileResponse.cs" />
+    <Compile Include="Models\Response\CoreFileResponse.cs" />
+    <Compile Include="Models\Response\FileItemResponse.cs" />
+    <Compile Include="Models\Watermark\WaterMarkInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Response\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

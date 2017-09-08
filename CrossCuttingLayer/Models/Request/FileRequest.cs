@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FileViewer.CrossCuttingLayer.Enums;
+using FileViewer.CrossCuttingLayer.Models.Watermark;
+using System;
+using System.Collections.Generic;
 
 namespace FileViewer.CrossCuttingLayer.Models.Request
 {
@@ -12,5 +15,9 @@ namespace FileViewer.CrossCuttingLayer.Models.Request
         //optional see if required
         public Guid CreatedUserId { get; set; }
         public int AppId { get; set; }
+        public bool IsWaterMarkRequired { get; set; }
+        public Dictionary<WaterMarkInfoFields, bool> WaterMarkFieldsRequired { get; set; }
+        public WaterMarkInfo WaterMarkInfoDetails { get; set; }
+        
     }
 }
