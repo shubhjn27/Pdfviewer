@@ -8,6 +8,6 @@ namespace FileViewer.Dependency.File
     public interface IFileItemService
     {
         FileItemResponse ViewFileItem(FileRequest viewFile);
-        FileStream GetFile()
+        FileStream GetFile();
     }
 }
