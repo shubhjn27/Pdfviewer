@@ -3,11 +3,11 @@ using FileViewer.CrossCuttingLayer.Models.Response;
 using System;
 using System.IO;
 
-namespace FileViewer.Dependency.File
+namespace FileViewer.Dependency.Files
 {
-    public interface IFileItemService
+    public interface IFileItemService<TFileRequest,TResponse>
     {
-        FileItemResponse ViewFileItem(FileRequest viewFile);
+        TResponse ViewFileItem(TFileRequest viewFile);
         FileStream GetFile();
     }
 }

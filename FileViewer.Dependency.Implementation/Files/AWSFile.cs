@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FileViewer.Dependency.Implementation.File
+namespace FileViewer.Dependency.Implementation.Files
 {
-    class File
+    class AWSFile
     {
     }
 }

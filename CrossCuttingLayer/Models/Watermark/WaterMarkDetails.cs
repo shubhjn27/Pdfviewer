@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FileViewer.Dependency.Implementation.File
+namespace FileViewer.CrossCuttingLayer.Models.Watermark
 {
-    class AWSFile
+    public class WaterMarkDetails
     {
+
     }
 }

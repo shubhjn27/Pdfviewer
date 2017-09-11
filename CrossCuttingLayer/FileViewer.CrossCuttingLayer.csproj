@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dto\FileItemDto.cs" />
+    <Compile Include="Enums\FileItemStreamType.cs" />
     <Compile Include="Enums\FileSource.cs" />
     <Compile Include="Enums\FileType.cs" />
     <Compile Include="Enums\WaterMarkInfoFields.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Models\Response\AWSFileResponse.cs" />
     <Compile Include="Models\Response\CoreFileResponse.cs" />
     <Compile Include="Models\Response\FileItemResponse.cs" />
+    <Compile Include="Models\Watermark\WaterMarkDetails.cs" />
     <Compile Include="Models\Watermark\WaterMarkInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FileViewer.Service.BLL
+namespace FileViewer.Dependency.Implementation.Files
 {
-    internal class FileItemService 
+    class CoreFile
     {
-        //private readonly 
     }
 }

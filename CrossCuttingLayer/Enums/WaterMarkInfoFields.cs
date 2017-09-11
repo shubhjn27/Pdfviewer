@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace FileViewer.CrossCuttingLayer.Enums
 {
+    [Flags]
     public enum WaterMarkInfoFields
     {
         IPAddress = 1,
-        EmailAddress= 2,
-        AccessDateTime=3,
-        PageNumberOutOfTotal=4,
-        CustomMessage=5
+        EmailAddress = 1 << 1,
+        AccessDateTime = 1 << 2,
+        PageNumberOutOfTotal = 1 << 3,
+        CustomMessage = 1 << 4
     }
 }

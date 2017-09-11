@@ -16,8 +16,7 @@ namespace FileViewer.CrossCuttingLayer.Models.Request
         public Guid CreatedUserId { get; set; }
         public int AppId { get; set; }
         public bool IsWaterMarkRequired { get; set; }
-        public Dictionary<WaterMarkInfoFields, bool> WaterMarkFieldsRequired { get; set; }
+        public WaterMarkInfoFields WaterMarkFieldsRequired { get; set; }
         public WaterMarkInfo WaterMarkInfoDetails { get; set; }
-        
     }
 }

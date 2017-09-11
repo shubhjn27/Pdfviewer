@@ -9,7 +9,7 @@
 
         initializeViewer();
     }
-
+    
     function initializeViewer(){
         var viewerElement = document.getElementById("viewer");
         console.log("inside viewer");
@@ -19,7 +19,7 @@
             type: "html5",
             documentType: "pdf",
             streaming: true,
-            initialDoc: "../Scripts/WebViewer/autoPDF.pdf" //viewerModel.ApplicationPath + '/FileItem/' + viewerModel.FileItemId + '/ViewerData/' + token
+            initialDoc: "../Scripts/WebViewer/allomusers.pdf" //viewerModel.ApplicationPath + '/FileItem/' + viewerModel.FileItemId + '/ViewerData/' + token
         }, viewerElement); 
 
         $("#viewer").on("documentLoaded", function () {
